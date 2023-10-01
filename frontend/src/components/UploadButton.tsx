@@ -50,7 +50,7 @@ const UploadButton: FC<UploadButtonProps> = ({}) => {
     try {
       const formData = new FormData()
       formData.append('file', file)
-      const response = await fetch(`${process.env.API_URL}/data/upload`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/data/upload`, {
         method: 'POST',
         body: formData
       })
